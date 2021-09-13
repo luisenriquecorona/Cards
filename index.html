@@ -420,6 +420,35 @@ box-shadow: 0px 8px 15px rgb(0, 0, 0, 0.1);
 
 </style>
 
+<style>
+  .textbox
+  {
+  border: 1px solid #DBE1EB;
+  font-size: 15px;
+  font-family: Arial, Verdana;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  background: #FFFFFF;
+  background: linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -moz-linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -webkit-linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -o-linear-gradient(left, #FFFFFF, #F7F9FA);
+  color: #2E3133;
+  }
+  
+  .textbox:focus
+  {
+  color: #2E3133;
+  border-color: #FBFFAD;
+  }
+ </style>
+
 <script>
 function envia(elemento){
 var value = elemento.previousSibling.value;
@@ -429,7 +458,7 @@ window.location.href = '?value:'+ value + ' URL ' + id2;
 </script>
  
     <form action="#">
-        <input type="text" id="TextKi" value=""><input class="button1" type="button" onclick="envia(this);" value="TextKi" />
+        <input type="text" class="textbox" id="TextKi" value=""><input class="button1" type="button" onclick="envia(this);" value="TextKi" />
     </form>
  </div>
  </div>
