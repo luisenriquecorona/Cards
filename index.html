@@ -274,155 +274,6 @@ body { font-family: sans-serif; }
 
 </style>
   
-  <style>
-
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  user-select: none;
-  font-family: "Poppins", sans-serif;
-}
-body {
-  background: #ffffff;
-  overflow: hidden;
-}
-img{
-  height:20px;
-  width: 20px;
-}
-nav {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-nav .drop-btn {
-  width: 300px;
-  background: #ffffff;
-  border-radius: 15px;
-  line-height: 55px;
-  font-size: 18px;
-  font-weight: 500;
-  color: #364f6b;
-  padding: 0 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 
-    0 6px 6px rgba(0, 0, 0, 0.23);
-}
-nav .drop-btn span {
-  float: right;
-  line-height: 50px;
-  font-size: 28px;
-  cursor: pointer;
-}
-nav .tooltip {
-  position: absolute;
-  right: 20px;
-  bottom: -20px;
-  height: 15px;
-  width: 15px;
-  background: #ffffff;
-  transform: rotate(45deg);
-  display: none;
-}
-nav .tooltip.show{
-  display: block;
-}
-
-nav .wrapper {
-  position: absolute;
-  top: 65px;
-  display: flex;
-  width: 300px;
-  overflow: hidden;
-  border-radius: 15px;
-  background: #ffffff;
-  display: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-nav .wrapper.show {
-  display: block;
-  display: flex;
-}
-
-.wrapper ul {
-  width: 400px;
-  list-style: none;
-  padding: 10px;
-  transition: all 0.3s ease;
-}
-.wrapper ul li {
-  line-height: 55px;
-}
-.wrapper ul li a {
-  position: relative;
-  color: #364f6b;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 0 10px;
-  font-family: 'Nunito', sans-serif;
-  display: flex;
-  border-radius: 8px;
-  align-items: center;
-  text-decoration: none;
-}
-.wrapper ul li:hover a {
-  background: #ffffff;
-  color: #364f6b;
-}
-.wrapper ul li a:hover .icon {
-  background: #c5e3f6;
-  transform: rotate(360deg) scale(1.1);
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-ul li a .icon {
-  height: 40px;
-  width: 40px;
-  margin-right: 13px;
-  background: #ffffff;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  border-radius: 50%;
-}
-ul li a .icon span {
-  line-height: 45px;
-  font-size: 20px;
-  color: #364f6b;
-}
-ul li a:hover .icon span{
-  color: #364f6b;
-}
-ul li a i {
-  position: absolute;
-  right: 10px;
-  font-size: 25px;
-  pointer-events: none;
-}
-.wrapper ul.setting-drop,
-.wrapper ul.help-drop {
-  display: none;
-  margin: 0 auto;
-  position: absolute;
-}
-.wrapper .arrow {
-  padding-left: 10px;
-  font-size: 20px;
-  font-weight: 500;
-  color: #364f6b;
-  cursor: pointer;
-}
-.wrapper .arrow span {
-  margin-right: 15px;
-}
-
-
-</style>
-
  </head>
 
  <body class="parent">
@@ -565,92 +416,58 @@ function playVideo2() {
   
  <div class="contentBx">
   
+  <style>
+.dropbtn {
+  background-color: #8885ca;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #9997d2;
+}
+</style>
+  
   <h2>TextKi API´s</h2>
   
-  <nav>
-  <div class="drop-btn">
-    Drop down <span class="fas fa-caret-down"></span>
+  <div class="dropdown">
+  <button class="dropbtn">Select</button>
+  <div class="dropdown-content">
+  <a href="https://luisenriquecorona.github.io/jasmine/">Jasmine</a>
+  <a href="https://luisenriquecorona.github.io/PhoneGap/">PhoneGap</a>
+  <a href="https://luisenriquecorona.github.io/JQX/">JS Chart</a>
   </div>
-  <div class="tooltip">
 </div>
-  <div class="wrapper">
-    <ul class="menu-bar">
-      <li><a href="https://luisenriquecorona.github.io/jasmine/">
-          <div class="icon">
-            <span><img src="https://img.icons8.com/cute-clipart/64/000000/home.png"/></span></div>
-          Jasmine
-        </a></li>
-      <li class="setting-item"><a href="#">
-          <div class="icon">
-            <span><img src="https://img.icons8.com/color/48/000000/gear.png"/></span></div>
-          JS Chart´s<i class="fas fa-angle-right"></i>
-        </a></li>
-      <li class="help-item"><a href="https://luisenriquecorona.github.io/PhoneGap/">
-          <div class="icon">
-            <span><img src="https://img.icons8.com/fluent/48/000000/help.png"/></span></div>
-          PhoneGap
-        </a></li>
-      <li><a href="https://luisenriquecorona.github.io/slider_koyori_n/">
-          <div class="icon">
-            <span><img src="https://img.icons8.com/bubbles/48/000000/user-male.png"/></span></div>
-          Koyori
-        </a></li>
-      <li><a href="https://luisenriquecorona.github.io/Digital-Agency/">
-          <div class="icon">
-            <span><img src="https://img.icons8.com/fluent/48/000000/feedback.png"/></span></div>
-          Digital Agency
-        </a></li>
-    </ul>
-    <!-- Settings & privacy Menu-items -->
-    <ul class="setting-drop">
-      <li class="arrow back-setting-btn"><span class="fas fa-arrow-left"></span>ECMAScript 7</li>
-      <li><a href="https://luisenriquecorona.github.io/Radar/">
-          <div class="icon">
-            <span><img src="https://img.icons8.com/fluent/48/000000/user-male-circle.png"/></span></div>
-          Knob Widget
-        </a></li>
-      <li><a href="https://luisenriquecorona.github.io/JavaScript-Chart/">
-          <div class="icon">
-            <span><img src="https://img.icons8.com/fluent/48/000000/lock-2.png"/></span></div>
-          Loan Balance
-        </a></li>
-      <li><a href="https://luisenriquecorona.github.io/JQX/">
-          <div class="icon">
-            <span><img src="https://img.icons8.com/plasticine/100/000000/address-book--v1.png"/></span></div>
-          JQX
-        </a></li>
-    </ul>
-  </div>
-</nav>
-
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
-<script>
-const drop_btn = document.querySelector(".drop-btn span");
-const tooltip = document.querySelector(".tooltip");
-const menu_wrapper = document.querySelector(".wrapper");
-const menu_bar = document.querySelector(".menu-bar");
-const setting_drop = document.querySelector(".setting-drop");
-const setting_item = document.querySelector(".setting-item");
-const setting_btn = document.querySelector(".back-setting-btn");
-drop_btn.onclick = () => {
-  menu_wrapper.classList.toggle("show");
-  tooltip.classList.toggle("show");
-};
-setting_item.onclick = () => {
-  menu_bar.style.marginLeft = "-400px";
-  setTimeout(() => {
-    setting_drop.style.display = "block";
-  }, 100);
-};
-setting_btn.onclick = () => {
-  menu_bar.style.marginLeft = "0px";
-  setting_drop.style.display = "none";
-};
-
-
-</script>
-
   
  <h2>TextKi to URL</h2>
 
