@@ -105,6 +105,17 @@ body
  min-height: 0;
  background: #ffffff;
 }
+ 
+ .parent{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: calc(100% - 40px);
+
+    padding: 1rem;
+    background: linear-gradient(0deg, rgba(206,228,255,1) 0%, rgba(202,190,255,1) 40%, rgba(217,201,255,1) 100%);
+    box-shadow: inset 3px 3px 10px rgba(32, 45, 104, 0.747);
+}
 
 h1 {
   color: #32a3b1;
@@ -265,7 +276,7 @@ body { font-family: sans-serif; }
 
  </head>
 
- <body>
+ <body class="parent">
 
  <div align="center"><h1>TextKi Target´s</h1></div>
 
