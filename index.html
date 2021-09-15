@@ -468,72 +468,8 @@ function playVideo2() {
   <a href="https://luisenriquecorona.github.io/PhoneGap/">PhoneGap</a>
   <a href="https://luisenriquecorona.github.io/JQX/">JS Chart</a>
   </div>
-</div>
-  <br /><br /><br /><br /><br /><br /><br />
- <h2>TextKi to URL</h2>
-
-<style>
-
-.button1{
-
-background-color: #143664;
-border: none;
-color: white;
-padding: 15px 32px;
-text-aling: center;
-text-decoration: none;
-display: inline-block;
-font-size: 50px;
-border: none;
-border-radius: 45px;
-box-shadow: 0px 8px 15px rgb(0, 0, 0, 0.1);
-
-}
-
-</style>
-
-<style>
-  .textbox
-  {
-  border: 1px solid #DBE1EB;
-  font-size: 25px;
-  font-family: Arial, Verdana;
-  padding-left: 7px;
-  padding-right: 7px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -o-border-radius: 4px;
-  background: #FFFFFF;
-  background: linear-gradient(left, #FFFFFF, #F7F9FA);
-  background: -moz-linear-gradient(left, #FFFFFF, #F7F9FA);
-  background: -webkit-linear-gradient(left, #FFFFFF, #F7F9FA);
-  background: -o-linear-gradient(left, #FFFFFF, #F7F9FA);
-  color: #2E3133;
-  }
-  
-  .textbox:focus
-  {
-  color: #2E3133;
-  border-color: #FBFFAD;
-  }
- </style>
-
-<script>
-function envia(elemento){
-var value = elemento.previousSibling.value;
-var id2 = elemento.previousSibling.id;
-window.location.href = '?value:'+ value + ' URL ' + id2;
-}
-</script>
- 
-    <form action="#">
-        <input type="text" class="textbox" id="TextKi" value=""><input class="button1" type="button" onclick="envia(this);" value="TextKi" />
-    </form>
- 
   </div>
+  
   
   <style>
 
@@ -632,6 +568,71 @@ pointer-events: visible;
 </div>
 <div class="overlay">Check Open</div>
 </div>
+  
+  <style>
+
+.button1{
+
+background-color: #143664;
+border: none;
+color: white;
+padding: 15px 32px;
+text-aling: center;
+text-decoration: none;
+display: inline-block;
+font-size: 50px;
+border: none;
+border-radius: 45px;
+box-shadow: 0px 8px 15px rgb(0, 0, 0, 0.1);
+
+}
+
+</style>
+
+<style>
+  .textbox
+  {
+  border: 1px solid #DBE1EB;
+  font-size: 25px;
+  font-family: Arial, Verdana;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  background: #FFFFFF;
+  background: linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -moz-linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -webkit-linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -o-linear-gradient(left, #FFFFFF, #F7F9FA);
+  color: #2E3133;
+  }
+  
+  .textbox:focus
+  {
+  color: #2E3133;
+  border-color: #FBFFAD;
+  }
+ </style>
+
+<script>
+function envia(elemento){
+var value = elemento.previousSibling.value;
+var id2 = elemento.previousSibling.id;
+window.location.href = '?value:'+ value + ' URL ' + id2;
+}
+</script>
+  
+  <h2>TextKi to URL</h2>
+ 
+    <form action="#">
+        <input type="text" class="textbox" id="TextKi" value=""><input class="button1" type="button" onclick="envia(this);" value="TextKi" />
+    </form>
+ 
+  </div>
   
  </div>
 
