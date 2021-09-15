@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+
+ <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+
+ <meta charset="utf-8">
+
+ <title>TextKi Cards</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+body{
+ background-color: #6ec7ff;
+}
+.btn-holder{
+ display: block;
+ margin: 0 auto;
+ margin-top: 64px;
+ text-align: center;
+}
+.intro-text{
+ margin-bottom: 48px;
+ font-family: 'Quicksand', sans-serif;
+ color: white;
+ font-size: 70px;
+}
+.btn{
+ width: 220px;
+ height: 220px;
+ font-size: 100px;
+ border-radius: 30px;
+ border: none;
+ color: white;
+ vertical-align: top;
+ -webkit-transition: .6s ease-in-out;
+ transition: .6s ease-in-out;
+}
+.btn:hover{
+ cursor: pointer;
+}
+.btn:focus{
+ outline: none;
+}
+
+.btn:first-of-type{
+ margin-right: 80px;
+}
+
+.neumorphic{
+ background: linear-gradient(145deg, #76d5ff, #63b3e6);
+ box-shadow: 30px 30px 40px #1e7689,
+ -30px -30px 40px #7fe5ff;
+ border: 3px solid rgba(255, 255, 255, .4);
+}
+.neumorphic-pressed{
+ background: linear-gradient(145deg, #63b3e6, #76d5ff);
+ -webkit-box-shadow: inset 15px 15px 20px -20px rgba(0,0,0,.5);
+ -moz-box-shadow: inset 15px 15px 20px -20px rgba(0,0,0,.5);
+ box-shadow: inset 15px 15px 20px -20px rgba(0,0,0,.5);
+}
+.neumorphic:focus, .neumorphic:hover, .neumorphic:focus, .neumorphic:hover, .neumorphic-pressed:focus, .neumorphic-pressed:hover {
+ border: 3px solid rgba(46, 74, 112, .75);
+}
+
+.material-icon {
+ font-family: 'Material Icons';
+ font-weight: normal;
+ font-style: normal;
+ font-size: 100px;
+ display: inline-block;
+ line-height: 1;
+ text-transform: none;
+ letter-spacing: normal;
+ word-wrap: normal;
+ white-space: nowrap;
+ direction: ltr;
+ -webkit-font-smoothing: antialiased;
+ text-rendering: optimizeLegibility;
+ -moz-osx-font-smoothing: grayscale;
+ font-feature-settings: 'liga';
+}
+#pause {
+ color: #143664;
+ display: none;
+}
+
+</style>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+*
+{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Poppins', sans-serif;
+}
+body
+{
+ justify-content: center;
+ align-items: center;
+ min-height: 0;
+ background: #ffffff;
+}
+ 
+ .parent{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: calc(100% - 40px);
+
+    padding: 1rem;
+    background: #b4b6d8;
+    box-shadow: inset 3px 3px 10px rgba(32, 45, 104, 0.747);
+}
+
+h1 {
+  color: #32a3b1;
+  font-weight: normal;
+  font-size: 120px;
+  font-family: Poppins;
+  text-transform: uppercase;
+}
+
+.container .card
+{
+ display:block;
+ margin:0 auto;
+ margin: 0;
+ padding: 0;
+ background: #ebf5fc;
+ border-radius: 40px;
+ box-shadow: -6px -6px 20px rgba(255,255,255,1), 6px 6px 20px rgba(0,0,0,0.1);
+}
+.container .card:hover
+{
+ box-shadow: inset -6px -6px 20px rgba(255,255,255,0.5), inset 6px 6px 20px rgba(0,0,0,0.05);
+}
+.container .card .imgBx
+{
+ position: relative;
+ text-align: center;
+}
+.container .card .imgBx img
+{
+ max-width: 110px;
+}
+.container .card .contentBx
+{
+ position: relative;
+ margin-top: 90px;
+ text-align: center;
+}
+.container .card .contentBx h2
+{
+ color: #32a3b1;
+ font-weight: 100px;
+ font-size: 100px;
+ letter-spacing: 2px;
+}
+.container .card .contentBx p
+{
+ color: #32a3b1;
+}
+.container .card .contentBx a
+{
+ display: inline-block;
+ padding: 0;
+ margin-top: 15px;
+ border-radius: 40px;
+ color: #32a3b1;
+ font-size: 100px;
+ text-decoration: none;
+ box-shadow: -4px -4px 15px rgba(255,255,255,1), 4px 4px 15px rgba(0,0,0,0.1);
+}
+.container .card .contentBx a:hover
+{
+ box-shadow: inset -4px -4px 10px rgba(255,255,255,0.5), inset 4px 4px 10px rgba(0,0,0,0.1);
+}
+.container .card a:hover span
+{
+ display: block;
+ transform: scale(0.98);
+}
+.container .card:hover .imgBx,
+.container .card:hover .contentBx
+{
+ transform: scale(0.98);
+}
+
+</style>
+
+<style>
+
+video {
+display:block;
+margin:0 auto;
+}
+
+</style>
+  
+  <style>
+   
+   .imgR {
+    width:600px;
+    height:600px;
+    border-radius: 320px;
+    border:10px solid #666;
+}
+   
+  </style>
+
+<style>
+
+*, *::before, *::after {
+ box-sizing: border-box;
+}
+:root {
+ --nColor: #ffffff;
+ --brShadow: -6px 6px 10px rgba(0,0,0,0.5);
+ --tlShadow: 6px -6px 10px rgba(255,255,255,0.5);
+}
+
+body {
+ margin: 0;
+ min-height: 100vh;
+ display:block;
+ margin:0 auto;
+ align-items: center;
+ justify-content: center;
+ flex-wrap: wrap;
+
+}
+
+.n-outset,
+
+.n-smooth-sq {
+ background-color: var(--nColor);
+ box-shadow: var(--brShadow), var(--tlShadow);
+ border-radius: 10%;
+ width: 200px;
+ height: 200px;
+ margin: auto;
+}
+
+</style>
+
+<style>
+
+/* external css: flickity.css */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel {
+  background: #ebf5fc;
+}
+
+.carousel-cell {
+  width: 66%;
+  height: 400px;
+  margin-right: 10px;
+  background: #ebf5fc;
+}
+
+.carousel-cell-image {
+  display: block;
+  max-height: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+
+</style>
+  
+ </head>
+
+ <body class="parent">
+
+ <div align="center"><h1>TextKi Target´s</h1>
+  
+  <img src='YQgupAU-_400x400.jpg' class='imgR' /></div>
+
+ <div class="container">
+
+ <div class="card">
+ <div class="contentBx">
+ <h2>Portfolio</h2>
+
+<br /><br /><br />
+
+<div style="text-align:center"> 
+
+<video id="myVid1" width="100%" style="border-radius: 20px";>
+ <source src="graffiti1.mp4" type="video/mp4">
+
+</video>
+<script> 
+var myVideo1 = document.getElementById("myVid1");
+function playVideo1() { 
+ myVideo1.play(); 
+} 
+</script>
+
+</div>
+
+<br /><br /><br />
+
+<div style="text-align:center"> 
+<button class="btn neumorphic" onclick="playVideo1()">
+
+ <span class="icon">
+ <i id="play" class="material-icon">▶
+ </i>
+ </span>
+
+</button>
+</div>
+
+<br /><br />
+
+ <a href="https://luisenriquecorona.github.io/Blooger/"><span>Read More</span></a>
+
+ </div>
+</div>
+
+
+ <div class="card">
+ <div class="contentBx">
+ <h2>jQuery</h2>
+
+<br /><br /><br />
+
+<div style="text-align:center"> 
+
+<video id="myVid" width="100%" style="border-radius: 20px";>
+ <source src="video2.mp4" type="video/mp4">
+
+</video>
+<script> 
+var myVideo2 = document.getElementById("myVid");
+function playVideo() { 
+ myVideo2.play(); 
+} 
+</script>
+
+</div>
+
+<br /><br /><br />
+
+<div style="text-align:center"> 
+<button class="btn neumorphic" onclick="playVideo()">
+
+ <span class="icon">
+ <i id="play" class="material-icon">▶
+ </i>
+ </span>
+
+</button>
+</div>
+
+<br /><br />
+
+ <a href="https://luisenriquecorona.github.io/JQueryMobile/"><span>Read More</span></a>
+
+ </div>
+</div>
+
+
+<div class="card">
+ <div class="contentBx">
+ <h2>Mobile</h2>
+
+<br /><br /><br />
+
+<div style="text-align:center"> 
+
+<video id="myVid2" width="100%" style="border-radius: 20px";>
+ <source src="uiux.mp4" type="video/mp4">
+
+</video>
+<script> 
+var myVideo3 = document.getElementById("myVid2");
+function playVideo2() { 
+ myVideo3.play(); 
+} 
+</script>
+
+</div>
+
+<br /><br /><br />
+
+<div style="text-align:center"> 
+<button class="btn neumorphic" onclick="playVideo2()">
+
+ <span class="icon">
+ <i id="play" class="material-icon">▶
+ </i>
+ </span>
+
+</button>
+</div>
+
+<br /><br />
+
+ <a href="https://luisenriquecorona.github.io/Mobile/"><span>Read More</span></a>
+
+ </div>
+</div>
+
+<br /><br />
+
+ <div class="card">
+ <div align="center">
+ <img src="https://image.flaticon.com/icons/svg/2092/2092063.svg" width="280" height="280" alt="#">
+ </div>
+  
+ <div class="contentBx">
+  
+  <style>
+.dropbtn {
+  background-color: #8885ca;
+  color: white;
+  padding: 16px;
+  font-size: 70px;
+  border: none;
+  cursor: pointer;
+  position: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ebf5fc;
+  min-width: 280px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ffffff}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #9997d2;
+}
+</style>
+  
+  <h2>TextKi API´s</h2>
+  
+  <div align="left" class="dropdown">
+  <button class="dropbtn">Select</button>
+  <div class="dropdown-content">
+  <a href="https://luisenriquecorona.github.io/jasmine/">Jasmine</a>
+  <a href="https://luisenriquecorona.github.io/PhoneGap/">PhoneGap</a>
+  <a href="https://luisenriquecorona.github.io/JQX/">JS Chart</a>
+  </div>
+  </div>
+  
+  </div>
+  
+  <style>
+
+*{
+margin: 0;
+padding: 0;
+}
+
+.center{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.main {
+width: 100%;
+height: 100vh;
+}
+
+.btn2 {
+padding: 10px 20px;;
+background: #2e5bff;
+color: white;
+font-size: 5rem;
+cursor: pointer;
+border-radius: 20px;
+
+}
+
+#Checkbtn{
+display: none;
+}
+
+.box {
+
+  position: absolute;
+top: 1800;
+left: 50%;
+transform: translate(-50%,-50%) scale(0.5);
+background: white;
+flex-direction: column;
+width: 550px;
+height: 450px;
+z-index:100;
+opacity: 0;
+pointer-events: none;
+border-radius: 20px;
+}
+
+.box .btn2{
+margin: 10px 0;
+}
+
+#Checkbtn:checked ~ .box{
+opacity: 1;
+pointer-events: visible;
+transform: translate(-50%,-50%) scale(1);
+transition: all 0.4s;
+transition-delay: 0.1s;
+}
+
+.overlay{
+  
+  position: absolute;
+top: 1800;
+left: 0;
+width: 100vw;
+height: 100vh;
+background: black;
+opacity: 0;
+z-index: 10;
+transform: scale(0.5);
+pointer-events: none;
+border-radius: 20px;
+}
+
+#Checkbtn:checked ~ .overlay{
+opacity: 0.9;
+transform: scale(1);
+transition: all 0.4s;
+pointer-events: visible;
+}
+   
+   .pmed {font-size: 3rem;}
+   
+</style>
+
+<div class="main center">
+<input type="checkbox" id="Checkbtn">
+<label for="Checkbtn" class="btn2">
+<a>Check Open</a>
+</label>
+<div class="box center">
+ <p class="pmed">TexKi  is Running</p>
+<label for="Checkbtn" class="btn2">
+<a>Close</a>
+</label>
+</div>
+<div class="overlay">Check Open</div>
+</div>
+  
+  <div class="contentBx">
+  
+  <style>
+
+.button1{
+
+background-color: #143664;
+border: none;
+color: white;
+padding: 15px 32px;
+text-aling: center;
+text-decoration: none;
+display: inline-block;
+font-size: 50px;
+border: none;
+border-radius: 45px;
+box-shadow: 0px 8px 15px rgb(0, 0, 0, 0.1);
+
+}
+
+</style>
+
+<style>
+  .textbox
+  {
+  border: 1px solid #DBE1EB;
+  font-size: 40px;
+  font-family: Arial, Verdana;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  background: #FFFFFF;
+  background: linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -moz-linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -webkit-linear-gradient(left, #FFFFFF, #F7F9FA);
+  background: -o-linear-gradient(left, #FFFFFF, #F7F9FA);
+  color: #2E3133;
+  }
+  
+  .textbox:focus
+  {
+  color: #2E3133;
+  border-color: #FBFFAD;
+  }
+ </style>
+
+<script>
+function envia(elemento){
+var value = elemento.previousSibling.value;
+var id2 = elemento.previousSibling.id;
+window.location.href = '?value:'+ value + ' URL ' + id2;
+}
+</script>
+  
+  <h2>TextKi to URL</h2>
+ 
+    <form action="#">
+        <input type="text" class="textbox" id="TextKi" value=""><input class="button1" type="button" onclick="envia(this);" value="TextKi" />
+    </form>
+  
+    <br />
+   
+  </div>
+  
+ </div>
+
+
+ <div class="card">
+ <div class="contentBx">
+ <h2>Templates</h2>
+ <p>Select Nav</p>
+
+ <div align="center">
+ <div id="London" class="ci" style="display:none">
+ <a href="https://luisenriquecorona.github.io/Reading-List/">
+ <img src="https://raw.githubusercontent.com/luisenriquecorona/imagenes/main/html5.webp" width="280" height="280" style="border-radius: 20px" align: center; alt="#"></a>
+  <h2>Reading - List</h2>
+  <p>IndexedDB</p> 
+ </div>
+ </div>
+
+
+ <div align="center">
+ <div id="Paris" class="ci" style="display:none">
+ <a href="https://luisenriquecorona.github.io/Epsilon/">
+ <img src="https://raw.githubusercontent.com/luisenriquecorona/Epsilon/main/images/splash/splash-icon.png" width="280" height="280" style="border-radius: 20px"; alt="#"></a>
+  <h2>Epsilon</h2>
+  <p>Mobile Framework</p>
+ </div>
+ </div>
+
+
+ <div align="center">
+ <div id="Tokyo" class="ci" style="display:none">
+ <a href="https://luisenriquecorona.github.io/cordova/">
+ <img src="https://raw.githubusercontent.com/luisenriquecorona/cordova/master/img/logo.png" width="280" height="280" style="border-radius: 20px"; alt="#"></a>
+  <h2>Cordova</h2>
+  <p>Adobe PhoneGap</p>
+ </div>
+ </div>
+
+ <br /><br />
+
+ <div align="center">
+  <div style="background: #ebf5fc; color: white; width: 100%; ">
+  <img onclick="openDiv('London')" src="https://image.flaticon.com/icons/png/128/5174/5174636.png" width="150" align="left" height="150" alt="#">
+  <img onclick="openDiv('Paris')" src="https://image.flaticon.com/icons/png/128/141/141007.png" width="150" height="150" alt="#">
+  <img onclick="openDiv('Tokyo')" src="https://image.flaticon.com/icons/png/128/610/610021.png" align="right" width="150" height="150" alt="#">
+ </div>
+ </div>
+
+<script>
+function openDiv(divName) {
+  var i;
+  var x = document.getElementsByClassName("ci");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(divName).style.display = "block";  
+}
+</script>
+</div>
+</div>
+
+
+ <div class="card">
+ <div class="contentBx">
+ <h2>Social</h2>
+
+<script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
+<link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
+
+ <div class="carousel" data-flickity='{ "lazyLoad": true }'>
+  <div class="carousel-cell">
+    <a href="https://soyluiscorona.wordpress.com/">
+      <img class="carousel-cell-image"
+      data-flickity-lazyload="https://raw.githubusercontent.com/luisenriquecorona/imagenes/main/Wordpress_Blue_logo.png" width="380" height="380" style="border-radius: 20px" alt="wordpress" /></a><br />
+  </div>
+  <div class="carousel-cell">
+    <a href="https://www.youtube.com/channel/UCtnyDiSdtz7s6FF8vxa3Nlw">
+      <img class="carousel-cell-image"
+      data-flickity-lazyload="https://raw.githubusercontent.com/luisenriquecorona/imagenes/main/youtube11.png" width="380" height="380" style="border-radius: 20px" alt="youtube" /></a><br />
+  </div>
+  <div class="carousel-cell">
+    <a href="https://www.instagram.com/soyluiscorona247/">
+      <img class="carousel-cell-image"
+      data-flickity-lazyload="https://raw.githubusercontent.com/luisenriquecorona/imagenes/main/logo-minimalist-instagram.png" width="380" height="380" style="border-radius: 20px" alt="instagram" /></a><br />
+  </div>
+  <div class="carousel-cell">
+    <a href="https://github.com/luisenriquecorona">
+      <img class="carousel-cell-image"
+      data-flickity-lazyload="https://raw.githubusercontent.com/luisenriquecorona/imagenes/main/github1.png" width="380" height="380" style="border-radius: 20px" alt="github" /></a><br />
+  </div>
+
+ </div>
+</div>
+</div>
+
+ </body>
+</html>
