@@ -532,7 +532,106 @@ window.location.href = '?value:'+ value + ' URL ' + id2;
     <form action="#">
         <input type="text" class="textbox" id="TextKi" value=""><input class="button1" type="button" onclick="envia(this);" value="TextKi" />
     </form>
- </div>
+ 
+  </div>
+  
+  <br /><br /><br />
+  
+  <style>
+
+*{
+margin: 0;
+padding: 0;
+}
+
+.center{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.main {
+width: 10%;
+height: 100vh;
+}
+
+.btn {
+padding: 10px 20px;
+background: #2e5bff;
+color: white;
+font-size: 1.2rem;
+cursor: pointer;
+border-radius: 20px;
+}
+
+#Checkbtn{
+display: none;
+}
+
+.box {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%) scale(0.5);
+background: white;
+flex-direction: column;
+width: 300px;
+height: 200px;
+z-index:100;
+opacity: 0;
+pointer-events: none;
+border-radius: 20px;
+}
+
+.box .btn{
+margin: 10px 0;
+}
+
+#Checkbtn:checked ~ .box{
+opacity: 1;
+pointer-events: visible;
+transform: translate(-50%,-50%) scale(1);
+transition: all 0.4s;
+transition-delay: 0.1s;
+}
+
+.overlay{
+position: fixed;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+background: black;
+opacity: 2;
+z-index: 10;
+transform: scale(0.5);
+pointer-events: none;
+border-radius: 20px;
+}
+
+#Checkbtn:checked ~ .overlay{
+opacity: 0.9;
+transform: scale(1);
+transition: all 0.4s;
+pointer-events: visible;
+}
+
+</style>
+
+<div class="main center">
+<input type="checkbox" id="Checkbtn">
+<label for="Checkbtn" class="btn">
+<a>Check Open</a>
+</label>
+<div class="box center">
+<h2>TexKi  is Running</h2>
+<label for="Checkbtn" class="btn">
+<a>Close</a>
+</label>
+</div>
+<div class="overlay"></div>
+</div>
+  
  </div>
 
 
