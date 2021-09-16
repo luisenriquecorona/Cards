@@ -8,33 +8,18 @@
 
  <title>TextKi Cards</title>
   
-  <style>
-   
-   #cont_escalable { display:block; }
-
-             @media only screen and (orientation:portrait){
-                #cont_escalable {  
-                      -webkit-transform: rotate(90deg);
-                      -moz-transform: rotate(90deg);
-                      -o-transform: rotate(90deg);
-                      -ms-transform: rotate(90deg);
-                      transform: rotate(90deg);
-
-                     }
-             }
-
-             @media only screen and (orientation:landscape){
-
-                #cont_escalable {  
-                      -webkit-transform: rotate(0deg);
-                      -moz-transform: rotate(0deg);
-                      -o-transform: rotate(0deg);
-                      -ms-transform: rotate(0deg);
-                      transform: rotate(0deg);
-                     }
-             }
-   
-  </style>
+<script>
+ 
+ $(document).ready(function () {
+  function reorient(e) {
+    var portrait = (window.orientation % 180 == 0);
+    $("body > div").css("-webkit-transform", !portrait ? "rotate(-90deg)" : "");
+  }
+  window.onorientationchange = reorient;
+  window.setTimeout(reorient, 0);
+});
+ 
+</script>
 
 <style>
 
