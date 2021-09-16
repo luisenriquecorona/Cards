@@ -298,7 +298,43 @@ body { font-family: sans-serif; }
 
 </style>
   
+  <style>
+
+#landscape {
+    display: none;
+    z-index: -100;
+}
+ 
+@media(max-width: 768px) and (orientation: landscape){
+#landscape {
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background: #f2f2f2;
+    z-index: 990000;
+    width: 100%;
+    height: 100vh;
+    font-size: 120%;
+    align-items: center;
+    justify-content: center;
+}
+}
+   
+  </style>
+  
  </head>
+
+<div id="landscape">
+   <div>
+	<p>
+	<img src="land" alt=""><br>
+	¡Turn the mobile! <br /><span>Please</span>
+	</p>
+  </div>
+</div>
 
  <body class="parent">
 
@@ -499,8 +535,6 @@ function playVideo2() {
   
   <style>
 
-
-
 .center{
 display: flex;
 justify-content: center;
@@ -509,7 +543,7 @@ align-items: center;
 
 .main {
 width: 100%;
-height: 60vh;
+height: 80vh;
 }
 
 .btn2 {
@@ -669,10 +703,10 @@ window.location.href = '?value:'+ value + ' URL ' + id2;
 <div class="main2 center2">
 <div class="container1">
 <ol>
-<dt><a href="https://replit.com/@luisenriquecoro/Licencias">Java Licenses</a></dt>
-<dt><a href="https://replit.com/@luisenriquecoro/Mensualidades">Java Monthly</a></dt>
-<dt><a href="https://replit.com/@luisenriquecoro/Llamadas-Telefonicas-Costo">Java Phone calls</a></dt>
-<dt><a href="https://replit.com/@luisenriquecoro/Votaciones">Java Voting</a></dt>
+<dt><a href="https://replit.com/@luisenriquecoro/Licencias?v=1">Java Licenses</a></dt>
+<dt><a href="https://replit.com/@luisenriquecoro/Mensualidades?v=1">Java Monthly</a></dt>
+<dt><a href="https://replit.com/@luisenriquecoro/Llamadas-Telefonicas-Costo?v=1">Java Phone calls</a></dt>
+<dt><a href="https://replit.com/@luisenriquecoro/Votaciones?v=1">Java Voting</a></dt>
 </ol>
 </div>
 </div>
