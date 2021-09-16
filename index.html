@@ -7,19 +7,6 @@
  <meta charset="utf-8">
 
  <title>TextKi Cards</title>
-  
-<script>
- 
- $(document).ready(function () {
-  function reorient(e) {
-    var portrait = (window.orientation % 180 == 0);
-    $("body > div").css("-webkit-transform", !portrait ? "rotate(-90deg)" : "");
-  }
-  window.onorientationchange = reorient;
-  window.setTimeout(reorient, 0);
-});
- 
-</script>
 
 <style>
 
@@ -298,7 +285,7 @@ body { font-family: sans-serif; }
 
 </style>
 
-	 <sccript>
+	 <script>
 		 screen.orientation.unlock();
 		 setTimeout( () => {
    		 fullscreen.exit();
